@@ -1,11 +1,13 @@
 import Links from "./components/Link";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
-      <h1>Shrink Ray!</h1>
-      <h2>PEW PEW!</h2>
+      <Header />
       <Links />
+      <Footer />
     </>
   );
 }
