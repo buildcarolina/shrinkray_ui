@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import styles from "./Link.module.css";
+import { useState, useEffect } from 'react';
+import styles from './LinkList.module.css';
 
 const LinkList = () => {
   const [linkItems, setLinkItems] = useState([]);
 
   useEffect(() => {
     const getLinks = async () => {
-      const url = "https://bzzt.fun/api/urls";
+      const url = 'https://bzzt.fun/api/urls';
       const data = await fetch(url).then((response) => response.json());
 
       setLinkItems(data);

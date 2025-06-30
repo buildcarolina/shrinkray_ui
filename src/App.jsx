@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router";
+import { Routes, Route } from 'react-router';
 
 import MainLayout from "./layouts/MainLayout";
 import Home from './pages/Home'
@@ -10,9 +10,9 @@ function App() {
   return (
     <Routes>
       <Route element={<MainLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/links" element={<Links />} />
-        <Route path="/addLink" element={<AddLink/>} />
+        <Route path='/' element={<Home />} />
+        <Route path='/links' element={<Links />} />
+        <Route path='/addLink' element={<AddLink />} />
       </Route>
       <Route path="/404" element={<Broke />} />
     </Routes>

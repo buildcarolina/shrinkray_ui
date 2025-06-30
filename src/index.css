@@ -19,6 +19,13 @@ body {
   height: 100%
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 15rem);
+  padding: 1rem;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
