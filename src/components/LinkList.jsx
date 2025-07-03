@@ -1,24 +1,21 @@
 import { useState, useEffect } from "react";
 import styles from "./Link.module.css";
 
-const Links = () => {
+const LinkList = () => {
   const [linkItems, setLinkItems] = useState([]);
 
   useEffect(() => {
     const getLinks = async () => {
       const url = "https://bzzt.fun/api/urls";
       const data = await fetch(url).then((response) => response.json());
-      setTimeout(() => {
-        setLinkItems(data);
-      }, 5000);
 
+      setLinkItems(data);
     };
     getLinks();
   }, [setLinkItems]);
 
   return (
     <>
-      <p>LINKS PAGE</p>
       {linkItems && linkItems.length > 0 ? (
         <ul className={styles.linkList}>
           {linkItems.map((link) => {
@@ -42,4 +39,4 @@ const Links = () => {
   );
 };
 
-export default Links;
+export default LinkList;
