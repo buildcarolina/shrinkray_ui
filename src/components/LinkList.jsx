@@ -6,7 +6,7 @@ const LinkList = () => {
 
   useEffect(() => {
     const getLinks = async () => {
-      const url = 'https://bzzt.fun/api/urls';
+      const url = `${import.meta.env.VITE_API_URL}/urls`;
       const data = await fetch(url).then((response) => response.json());
 
       setLinkItems(data);

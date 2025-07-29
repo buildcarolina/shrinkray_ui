@@ -11,7 +11,7 @@ const AddLink = () => {
     event.preventDefault();
 
     const shortUrl = nanoid(6);
-    const apiUrl = "https://bzzt.fun/api/urls";
+    const apiUrl = `${import.meta.env.VITE_API_URL}/urls/add`;
 
     const body = {
       long_url: linkUrl,
